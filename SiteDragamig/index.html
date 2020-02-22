@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Dragamig</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<script type='text/javascript' src='js/mobile.js'></script>
+	<script src="js/iro.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1><a href="index.html">DRAGAMIG<span>Dessinons la mode 4.0</span></a></h1>
+		<ul id="navigation">
+			<li class="current">
+				<a href="index.html">Accueil</a>
+			</li>
+			<li>
+				<a href="about.html">A propos</a>
+			</li>
+			<li>
+				<a href="">X</a>
+				<ul>
+					<li>
+						<a href="">Y</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="contact.html">Contact</a>
+			</li>
+		</ul>
+	</div>
+	<div id="body">
+		<div id="choixConfig">
+			<a class="svg"><object class="objConfig" id="tartan" type="image/svg+xml" data="tartan_motif.svg"></object></a>
+			<a class="svg"><object class="objConfig" id="Asanoha" type="image/svg+xml" data="Asanoha_motif.svg"></object></a>
+			<a class="svg"><object class="objConfig" id="leopard" type="image/svg+xml" data="leopard_motif.svg"></object></a>
+			<a class="svg"><object class="objConfig" id="camouflage" type="image/svg+xml" data="camouflage_motif.svg"></object></a>
+		</div>
+
+		<div id="testi">
+			<div class="wheel" id="colorWheelDemo" style="float:right; margin-top: -9%; margin-right: 2%;">
+			<input value="1" type="button" id="colorStatus" onclick="changeColor(this)"></div>
+			<object id="vetement" type="image/svg+xml" data="vetement.svg"></object>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div>
+			<span>72000, Le Mans</span>
+			<p>&copy; 2020 Dragamig. Tous droits réservés.</p>
+		</div>
+		<div id="connect">
+			<a href="" id="facebook" target="_blank">Facebook</a>
+			<a href="" id="twitter" target="_blank">Twitter</a>
+			<a href="" id="googleplus" target="_blank">Google&#43;</a>
+			<a href="" id="pinterest" target="_blank">Pinterest</a>
+		</div>
+	</div>
+</body>
+<script src="js/config.js"></script>
+</html>
