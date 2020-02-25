@@ -60,8 +60,8 @@ function save() {
 	
     console.log(svgElem);
     var margin = 0;
-    var width = svgElem.width.baseVal.value + 2 * margin;
-    var height = svgElem.height.baseVal.value + 2 * margin;
+    var width = 300;//svgElem.width.baseVal.value + 2 * margin;
+    var height = 800;//svgElem.height.baseVal.value + 2 * margin;
     var pdf = new jsPDF('l', 'pt', [width, height]);
     svg2pdf(svgElem, pdf, {});
 
