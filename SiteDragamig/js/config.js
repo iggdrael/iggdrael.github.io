@@ -28,7 +28,7 @@ function save() {
     console.time("t");
     var mySVG = document.getElementById("vetement");
     var svgDoc = mySVG.contentDocument;
-    var svgElem = svgDoc.getElementById("vetement");
+    var svgElem = svgDoc.getElementById("svg8");
 
     console.log(mySVG);
     console.log(svgElem);
