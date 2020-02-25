@@ -55,7 +55,7 @@ function SvgToPdf(){
 function save() {
     console.time("t");
     var mySVG = document.getElementById("vetement");
-    svgDoc = mySVG.contentDocument;
+    var svgDoc = mySVG.contentDocument;
     var svgElem = svgDoc.getElementById("vetement");
 	
     console.log(svgElem);
