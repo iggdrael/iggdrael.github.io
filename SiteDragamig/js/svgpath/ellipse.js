@@ -100,5 +100,3 @@ Ellipse.prototype.transform = function (m) {
 Ellipse.prototype.isDegenerate = function () {
   return (this.rx < epsilon * this.ry || this.ry < epsilon * this.rx);
 };
-
-module.exports = Ellipse;
