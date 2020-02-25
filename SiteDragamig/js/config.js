@@ -52,3 +52,17 @@ function SvgToPdf(){
 // or simply save the created pdf
     pdf.save('svg.pdf');
 }
+
+function save() {
+    console.time("t");
+    var svgElement = document.getElementById("vetement");
+    var margin = 0;
+    var width = svgElement.width.baseVal.value + 2 * margin;
+    var height = svgElement.height.baseVal.value + 2 * margin;
+    var pdf = new jsPDF('l', 'pt', [width, height]);
+    svg2pdf(svgElement, pdf, {});
+
+    pdf.save();
+
+    console.timeEnd("t");
+  }
