@@ -33,14 +33,13 @@ function changeColor(colorStatus){
 }
 
 function SvgToPdf(){
-    const svgElement = document.getElementById("vetement");
     const width = 400, height = 600;
 
 // create a new jsPDF instance
     const pdf = new jsPDF('l', 'pt', [width, height]);
 
 // render the svg element
-    svg2pdf(svgElement, pdf, {
+    svg2pdf(svgElem, pdf, {
 	    xOffset: 0,
 	    yOffset: 0,
 	    scale: 1
@@ -55,13 +54,12 @@ function SvgToPdf(){
 
 function save() {
     console.time("t");
-    var svgElement = document.getElementById("vetement");
-    console.log(svgElement);
+    console.log(svgElem);
     var margin = 0;
-    var width = svgElement.width.baseVal.value + 2 * margin;
-    var height = svgElement.height.baseVal.value + 2 * margin;
+    var width = svgElem.width.baseVal.value + 2 * margin;
+    var height = svgElem.height.baseVal.value + 2 * margin;
     var pdf = new jsPDF('l', 'pt', [width, height]);
-    svg2pdf(svgElement, pdf, {});
+    svg2pdf(svgElem, pdf, {});
 
     pdf.save();
 
