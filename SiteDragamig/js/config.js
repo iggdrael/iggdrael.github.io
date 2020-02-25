@@ -29,8 +29,8 @@ function save() {
     var mySVG = document.getElementById("vetement");
     var svgDoc = mySVG.contentDocument;
     var svgElem = svgDoc.getElementById("vetement");
-	
-    console.log(mySGV);
+
+    console.log(mySVG);
     console.log(svgElem);
     var margin = 0;
     var width = 300;//svgElem.width.baseVal.value + 2 * margin;
