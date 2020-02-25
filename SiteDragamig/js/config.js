@@ -24,46 +24,19 @@ mySVG.addEventListener("load", function() {
 	})
 }, false);
 
-
-function changeColor(colorStatus){
-	if (colorStatus.value === "1")
-		colorStatus.value = 2;
-	else
-		colorStatus.value = 1;
-}
-
-function SvgToPdf(){
-    const width = 400, height = 600;
-
-// create a new jsPDF instance
-    const pdf = new jsPDF('l', 'pt', [width, height]);
-
-// render the svg element
-    svg2pdf(svgElem, pdf, {
-	    xOffset: 0,
-	    yOffset: 0,
-	    scale: 1
-    });
-
-// get the data URI
-    const uri = pdf.output('datauristring');
-
-// or simply save the created pdf
-    pdf.save('svg.pdf');
-}
-
 function save() {
     console.time("t");
     var mySVG = document.getElementById("vetement");
     var svgDoc = mySVG.contentDocument;
     var svgElem = svgDoc.getElementById("vetement");
 	
+    console.log(mySGV);
     console.log(svgElem);
     var margin = 0;
     var width = 300;//svgElem.width.baseVal.value + 2 * margin;
     var height = 800;//svgElem.height.baseVal.value + 2 * margin;
     var pdf = new jsPDF('l', 'pt', [width, height]);
-    svg2pdf(svgElem, pdf, {});
+    svg2pdf(mySVG, pdf, {});
 
     pdf.save();
 
