@@ -281,7 +281,7 @@ function scanSegment(state) {
  *   [ command, coord1, coord2, ... ]
  * ]
  */
-module.exports = function pathParse(svgPath) {
+function pathParse(svgPath) {
   var state = new State(svgPath);
   var max = state.max;
 
