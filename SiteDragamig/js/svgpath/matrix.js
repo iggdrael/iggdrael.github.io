@@ -139,6 +139,3 @@ Matrix.prototype.calc = function (x, y, isRelative) {
     x * m[1] + y * m[3] + (isRelative ? 0 : m[5])
   ];
 };
-
-
-module.exports = Matrix;
