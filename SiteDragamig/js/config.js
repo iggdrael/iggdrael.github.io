@@ -24,9 +24,12 @@ mySVG.addEventListener("load", function() {
 	})
 }, false);
 
-function save(){
-    const svgElement = document.getElementById('vetement');
+function save(){	
+    const mySVG = document.getElementById("vetement");
+    const svgDoc = mySVG.contentDocument;
+    const svgElement = svgDoc.getElementById("svg8");
     console.log(svgElement);
+
     var margin = 0;
     var width = svgElement.width.baseVal.value + 2 * margin;
     var height = svgElement.height.baseVal.value + 2 * margin;
