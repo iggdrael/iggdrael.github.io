@@ -47,7 +47,7 @@ function SvgToPdf(){
     });
 
 // get the data URI
-    //const uri = pdf.output('datauristring');
+    const uri = pdf.output('datauristring');
 
 // or simply save the created pdf
     pdf.save('svg.pdf');
