@@ -34,7 +34,7 @@ function changeColor(colorStatus){
 
 function SvgToPdf(){
     const svgElement = document.getElementById("vetement");
-    const width = 300, height = 200;
+    const width = 400, height = 600;
 
 // create a new jsPDF instance
     const pdf = new jsPDF('l', 'pt', [width, height]);
