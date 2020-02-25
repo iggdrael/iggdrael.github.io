@@ -616,6 +616,3 @@ SvgPath.prototype.unshort = function () {
 
   return this;
 };
-
-
-module.exports = SvgPath;
