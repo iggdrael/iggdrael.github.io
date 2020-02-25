@@ -13,7 +13,7 @@ var CMD_SPLIT_RE    = /\s*(matrix|translate|scale|rotate|skewX|skewY)\s*\(\s*(.+
 var PARAMS_SPLIT_RE = /[\s,]+/;
 
 
-module.exports = function transformParse(transformString) {
+function transformParse(transformString) {
   var matrix = new Matrix();
   var cmd, params;
 
