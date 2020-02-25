@@ -54,6 +54,10 @@ function SvgToPdf(){
 
 function save() {
     console.time("t");
+    var mySVG = document.getElementById("vetement");
+    svgDoc = mySVG.contentDocument;
+    var svgElem = svgDoc.getElementById("vetement");
+	
     console.log(svgElem);
     var margin = 0;
     var width = svgElem.width.baseVal.value + 2 * margin;
