@@ -24,21 +24,25 @@ mySVG.addEventListener("load", function() {
 	})
 }, false);
 
-function save() {
-    console.time("t");
-    var mySVG = document.getElementById("vetement");
-    var svgDoc = mySVG.contentDocument;
-    var svgElem = svgDoc.getElementById("svg8");
-
-    console.log(mySVG);
-    console.log(svgElem);
+function save(){
+    const svgElement = document.getElementById('vetement');
+    console.log(svgElement);
     var margin = 0;
-    var width = 300;//svgElem.width.baseVal.value + 2 * margin;
-    var height = 800;//svgElem.height.baseVal.value + 2 * margin;
-    var pdf = new jsPDF('l', 'pt', [width, height]);
-    svg2pdf(mySVG, pdf, {});
+    var width = svgElement.width.baseVal.value + 2 * margin;
+    var height = svgElement.height.baseVal.value + 2 * margin;
+// create a new jsPDF instance
+    const pdf = new jsPDF('l', 'pt', [width, height]);
 
-    pdf.save();
+// render the svg element
+    svg2pdf(svgElement, pdf, {
+        xOffset: 0,
+        yOffset: 0,
+        scale: 1
+    });
 
-    console.timeEnd("t");
-  }
+// get the data URI
+    const uri = pdf.output('datauristring');
+
+// or simply save the created pdf
+    pdf.save('myPDF.pdf');
+}
