@@ -27,7 +27,7 @@ mySVG.addEventListener("load", function() {
 function save(){	
     const mySVG = document.getElementById("vetement");
     const svgDoc = mySVG.contentDocument;
-    const svgElement = svgDoc.getElementById("svg8");
+    const svgElement = svgDoc.getElementById("vetement");
     console.log(svgElement);
 
     var margin = 0;
