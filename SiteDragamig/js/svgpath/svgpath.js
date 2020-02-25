@@ -12,14 +12,6 @@
 
 'use strict';
 
-
-var pathParse      = require('./path_parse');
-var transformParse = require('./transform_parse');
-var matrix         = require('./matrix');
-var a2c            = require('./a2c');
-var ellipse        = require('./ellipse');
-
-
 // Class constructor
 //
 function SvgPath(path) {
