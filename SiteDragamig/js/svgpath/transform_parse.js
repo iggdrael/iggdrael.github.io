@@ -1,8 +1,5 @@
 'use strict';
 
-
-var Matrix = require('./matrix');
-
 var operations = {
   matrix: true,
   scale: true,
