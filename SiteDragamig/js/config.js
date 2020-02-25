@@ -37,7 +37,7 @@ function save(){
     const pdf = new jsPDF('l', 'pt', [width, height]);
 
 // render the svg element
-    svg2pdf(svgElement, pdf, {
+    svg2pdf(mySVG, pdf, {
         xOffset: 0,
         yOffset: 0,
         scale: 1
@@ -45,6 +45,7 @@ function save(){
 
 // get the data URI
     const uri = pdf.output('datauristring');
+    console.log(uri);
 
 // or simply save the created pdf
     pdf.save('myPDF.pdf');
