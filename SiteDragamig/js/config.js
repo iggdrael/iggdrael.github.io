@@ -31,8 +31,8 @@ function save(){
     console.log(svgElement);
 
     var margin = 0;
-    var width = svgElement.width.baseVal.value + 2 * margin;
-    var height = svgElement.height.baseVal.value + 2 * margin;
+    var width = 1000;//svgElement.width.baseVal.value + 2 * margin;
+    var height = 1000;//svgElement.height.baseVal.value + 2 * margin;
 // create a new jsPDF instance
     const pdf = new jsPDF('l', 'pt', [width, height]);
 
