@@ -7,12 +7,14 @@ var colorStatus = document.getElementById("colorStatus");
 mySVG.addEventListener("load", function() {
 	svgDoc = mySVG.contentDocument;
 	var svgElem = svgDoc.getElementById("vetement");
-	svgElem.setAttribute("style", "fill:url(#tartan)");
+	//svgElem.setAttribute("style", "fill:url(#tartan)");
 	var couleur1 = svgDoc.getElementsByClassName("couleur1");
 	var couleur2 = svgDoc.getElementsByClassName("couleur2");
-	
-	choixMotif.addEventListener("click", function(click){		
-		svgElem.setAttribute("style", "fill:url(#" + click.target.firstChild.id + ")");
+    
+    var SVGstyles;
+	choixMotif.addEventListener("click", function(click){
+        SVGstyles = svgElem.getAttribute("style");
+        svgElem.setAttribute("style","fill:url(#" + click.target.firstChild.id + ");");
 	});
 
 	colorWheel.on('color:change', function(color){
@@ -24,29 +26,23 @@ mySVG.addEventListener("load", function() {
 	})
 }, false);
 
-function save(){	
+function svgtopdf(){	
     const mySVG = document.getElementById("vetement");
-    const svgDoc = mySVG.contentDocument;
-    const svgElement = svgDoc.getElementById("vetement");
-    console.log(svgElement);
+	const svgDoc = mySVG.contentDocument;
+	const svgElement = svgDoc.getElementById("svg8");
+	console.log("disp " + svgElement.style.display);
+	const elem = svgElement.getElementById("g4075");
 
-    var margin = 0;
-    var width = 1000;//svgElement.width.baseVal.value + 2 * margin;
-    var height = 1000;//svgElement.height.baseVal.value + 2 * margin;
-// create a new jsPDF instance
-    const pdf = new jsPDF('l', 'pt', [width, height]);
+	svgElement.style.display = "block";
 
-// render the svg element
-    svg2pdf(mySVG, pdf, {
-        xOffset: 0,
-        yOffset: 0,
-        scale: 1
-    });
+	var margin = 0;
+	var width = 300;//svgElement.width.baseVal.value + 2 * margin;
+	var height = 300;//svgElement.height.baseVal.value + 2 * margin;
 
-// get the data URI
-    const uri = pdf.output('datauristring');
-    console.log(uri);
+	const pdf = new jsPDF('l', 'mm', [width, height]);
+	svg2pdf(svgElement, pdf, {xOffset: 0,yOffset: 0,scale: 1});
 
-// or simply save the created pdf
-    pdf.save('myPDF.pdf');
+	svgElement.style.display = "none";
+
+	pdf.save('test.pdf');
 }

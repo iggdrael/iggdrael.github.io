@@ -7,17 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<script type='text/javascript' src='js/mobile.js'></script>
-    <script src="js/iro.min.js"></script>
-    <script src="js/jspdf.min.js"></script>
-    <script src="js/svg2pdf.js"></script>
-    <script src="js/svg2pdf.min.js"></script>
+	<script src="js/iro.min.js"></script> <!--Roue des couleurs-->
 	
-    <script src="js/svgpath/svgpath.js"></script>
-    <script src="js/svgpath/path_parse.js"></script>
-    <script src="js/svgpath/transform_parse.js"></script>
-    <script src="js/svgpath/matrix.js"></script>
-    <script src="js/svgpath/a2c.js"></script>
-    <script src="js/svgpath/ellipse.js"></script>
+    <script src="js/jspdf.min.js"></script> <!--PDF converter-->
+    <script src="js/svg2pdf.min.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -50,12 +43,12 @@
 			<a class="svg"><object class="objConfig" id="camouflage" type="image/svg+xml" data="camouflage_motif.svg"></object></a>
 		</div>
 
-		<div id="testi">
+		<div>
 			<div class="wheel" id="colorWheelDemo" style="float:right; margin-top: -9%; margin-right: 2%;">
 			<input value="1" type="button" id="colorStatus" onclick="changeColor(this)"></div>
 			<object id="vetement" type="image/svg+xml" data="vetement.svg"></object>
-        </div>
-        <button onclick="save()">TO PDF</button>
+		</div>
+		<input type="button" onclick="svgtopdf()" value="TO PDF">
 	</div>
 
 	<div id="footer">
