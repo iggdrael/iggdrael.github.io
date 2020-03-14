@@ -2,4 +2,4 @@
 Site Dragamig / DLM
 
 
-> iggdrael.github.io/SiteDragamig
+> iggdrael.github.io/SiteDragamig/index.html
