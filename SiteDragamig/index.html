@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Dragamig</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/iro.min.js"></script> <!--Roue des couleurs-->
+
+	<script src="js/jspdf.min.js"></script> <!--PDF converter-->
+    <script src="js/svg2pdf.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h1><a href="index.html">DRAGAMIG<span>Dessinons la mode 4.0</span></a></h1>
+		<ul id="navigation">
+			<li class="current">
+				<a href="index.html">Accueil</a>
+			</li>
+			<li>
+				<a href="about.html">A propos</a>
+			</li>
+			<li>
+				<a href="">X</a>
+				<ul>
+					<li>
+						<a href="">Y</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="contact.html">Contact</a>
+			</li>
+		</ul>
+	</div>
+	<div id="body">
+		<div>
+			<scroll-container id="choixConfig">
+				<scroll-page>
+					<svg class="objConfig" id="lisbon" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#uselisbon"/>
+					</svg>
+				</scroll-page>
+				
+				<scroll-page>
+					<svg class="objConfig" id="kiwi" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#usekiwi"/>
+					</svg>
+				</scroll-page>
+
+				<scroll-page>
+					<svg class="objConfig" id="clouds" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#useclouds"/>
+					</svg>
+				</scroll-page>
+
+				<scroll-page>
+					<svg class="objConfig" id="grue" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#usegrue"/>
+					</svg>
+				</scroll-page>
+
+				<scroll-page>
+					<svg class="objConfig" id="pattern84587" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#line84416"/>
+					</svg>
+				</scroll-page>
+
+				<scroll-page>
+					<svg class="objConfig" id="pattern84587" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#line84416"/>
+					</svg>
+				</scroll-page>
+
+				<scroll-page>
+					<svg class="objConfig" id="pattern84587" viewBox="0 0 390 390">
+						<use xlink:href="patterns.svg#line84416"/>
+					</svg>
+				</scroll-page>
+
+			</scroll-container>
+			<div>
+				<img src="images/downloadIcon.png" id="downloadSVG" alt="download button" style="width:40px;float: left;" onclick="showsvg()">
+			</div>
+		</div>
+
+		<div>
+			<div class="wheel" id="colorWheelDemo" style="float:right; margin-right: 1%; margin-top: 1%">
+			<div><input id="scaleInput" class="istyle" type="range" min="0.1" max="1" value="0.5" step="0.1"/></div>
+			<div><input id="RotateInput" class="istyle" type="range" min="-180" max="180" value="0" step="1"/></div>
+			<div><input value="1" type="button" id="colorStatus" onclick="changeColor(this)"></div>
+		</div>
+		<div id="svgcontainer">
+			<object id="vetement" type="image/svg+xml" data="kimono.svg"></object>
+		 </div>
+		</div>
+	</div>
+
+	<div id="footer">
+		
+		<object id="patterns" type="image/svg+xml" data="patterns.svg" style="height:1px;width:1px;"></object>
+		<div>
+			<div style="float:left; width:40%;">
+				<span>72000, Le Mans</span>
+				<p>&copy; 2020 Dragamig. Tous droits réservés.</p>
+			</div>
+			<div style="width:10%;">
+				<img src="favicon.ico" alt="logo" width="30px" height="30px">
+			</div>
+		</div>
+		<div id="connect">
+			<a href="" id="facebook" target="_blank">Facebook</a>
+			<a href="" id="twitter" target="_blank">Twitter</a>
+			<a href="" id="googleplus" target="_blank">Google&#43;</a>
+			<a href="" id="pinterest" target="_blank">Pinterest</a>
+		</div>
+	</div>
+</body>
+<script src="js/config.js"></script>
+</html>
