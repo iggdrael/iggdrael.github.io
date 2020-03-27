@@ -1,4 +1,5 @@
 body {
+	font-family: "CaviarDreams";
 	background: #66707B;
 	color: #315f52;
 	font-size: 14px;
@@ -100,6 +101,7 @@ p a:hover {
 	margin-left: auto;
 	margin-right: auto;
 	border: solid #66707B 2px;
+	cursor: pointer;
 }
 #downloadSVG:hover{
 	opacity: .7;

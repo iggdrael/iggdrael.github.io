@@ -8,9 +8,10 @@
 
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/iro.min.js"></script> <!--Roue des couleurs-->
+	<script src="js/svgToPdf.js"></script> <!--Convert svg to png-->
+	<script src="js/pdfkit.js"></script>
+  	<script src="js/blobstream.js"></script>
 
-	<script src="js/jspdf.min.js"></script> <!--PDF converter-->
-    <script src="js/svg2pdf.min.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -38,6 +39,17 @@
 	<div id="body">
 		<div>
 			<scroll-container id="choixConfig">
+				<scroll-page>
+					<input type="file" accept="image/*" name="image" id="file" style="display: none;">
+					<label for="file"><img class="objConfig" src="images/uploadIcon.png"></label>
+				</scroll-page>
+
+				<scroll-page>
+					<svg class="objConfig" id="fillUni" viewBox="0 0 390 390">
+						<rect id="fillUniRect" x="0" y="0" width="390" height="390" fill="#66b88d" />
+					</svg>
+				</scroll-page>
+
 				<scroll-page>
 					<svg class="objConfig" id="lisbon" viewBox="0 0 390 390">
 						<use xlink:href="patterns.svg#uselisbon"/>
@@ -82,24 +94,23 @@
 
 			</scroll-container>
 			<div>
-				<img src="images/downloadIcon.png" id="downloadSVG" alt="download button" style="width:40px;float: left;" onclick="showsvg()">
+				<a id="dwlSVGhref"><img src="images/downloadIcon.png" id="downloadSVG" alt="download button" style="width:40px;float: left;cursor: pointer;"></a>
 			</div>
 		</div>
 
 		<div>
 			<div class="wheel" id="colorWheelDemo" style="float:right; margin-right: 1%; margin-top: 1%">
-			<div><input id="scaleInput" class="istyle" type="range" min="0.1" max="1" value="0.5" step="0.1"/></div>
-			<div><input id="RotateInput" class="istyle" type="range" min="-180" max="180" value="0" step="1"/></div>
+			<div><input id="scaleInput" class="istyle" type="range" min="0.1" max="2" value="0.55" step="0.01"/></div>
+			<div><input id="rotateInput" class="istyle" type="range" min="-180" max="180" value="0" step="1"/></div>
 			<div><input value="1" type="button" id="colorStatus" onclick="changeColor(this)"></div>
 		</div>
 		<div id="svgcontainer">
 			<object id="vetement" type="image/svg+xml" data="kimono.svg"></object>
-		 </div>
+		</div>
 		</div>
 	</div>
 
 	<div id="footer">
-		
 		<object id="patterns" type="image/svg+xml" data="patterns.svg" style="height:1px;width:1px;"></object>
 		<div>
 			<div style="float:left; width:40%;">
